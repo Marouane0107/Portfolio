@@ -2,7 +2,7 @@
 
 A personal portfolio website showcasing my projects, skills, and contact information. Built primarily with JavaScript, CSS, and HTML, this site is designed to highlight my work, provide an interactive user experience, and serve as a digital resume for potential collaborators, employers, or anyone interested in my journey as a developer.
 
-**🌐 Live Demo:** [https://3-d-portfolio-psi-wine.vercel.app/](https://portfolio-taupe-psi-29.vercel.app/)
+**🌐 Live Demo:** [https://portfolio-taupe-psi-29.vercel.app/](https://portfolio-taupe-psi-29.vercel.app/)
 
 ## 📋 Table of Contents
 
