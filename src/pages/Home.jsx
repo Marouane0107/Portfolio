@@ -1,4 +1,3 @@
-import { ThemeToggle } from "../components/ThemeToggle";
 import { StarBackground } from "../components/StarBackground";
 import { SkyBackground } from "../components/SkayBackground";
 import { Navbar } from "../components/Navbar";
@@ -11,11 +10,20 @@ import { Footer } from "../components/Footer";
 import { useEffect, useState } from "react";
 
 export const Home = () => {
-    const [isDark, setIsDark] = useState(false);
+    const [isDark, setIsDark] = useState(true);
 
     useEffect(() => {
         const root = window.document.documentElement;
-        setIsDark(root.classList.contains("dark"));
+        const theme = localStorage.getItem('theme');
+        
+        // Set initial dark mode if no theme is set or if theme is 'dark'
+        if (theme === 'light') {
+            setIsDark(false);
+        } else {
+            setIsDark(true);
+            root.classList.add('dark');
+        }
+        
         const observer = new MutationObserver(() => {
             setIsDark(root.classList.contains("dark"));
         });
@@ -25,7 +33,6 @@ export const Home = () => {
 
     return( 
         <div className="min-h-screen bg-background text-foreground overflow-x-hidden relative">
-            <ThemeToggle />
             {isDark ? <StarBackground /> : <SkyBackground />}
             <div className="relative z-10">
                 <Navbar />

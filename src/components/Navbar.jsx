@@ -2,6 +2,7 @@ import {cn} from "@/lib/utils";
 import { Menu, X } from "lucide-react";
 import { useEffect } from "react";
 import { useState } from "react";
+import { ThemeToggle } from "./ThemeToggle";
 
 
 const navItems = [
@@ -39,19 +40,23 @@ export const Navbar = () => {
 					</span>
 				</a>
 				{/* desktop nav */}
-				<div className="hidden md:flex space-x-8">
+				<div className="hidden md:flex items-center space-x-8">
 					{navItems.map((item, key) => (
 						<a key={key} href={item.href} className="text-foreground/80 hover:text-primary transition-colors duration-300">
 							{item.name}
 						</a> ))}
+					<ThemeToggle />
 				</div>
 				{/* mobile nav */}
 
-				<button onClick={() => setIsMobileMenuOpen((prev) => !prev)} 
-					className="md:hidden p-2 text-foreground z-50" aria-label={isMobileMenuOpen ? "Close Menu" : "Open Menu"}
-				> 
-					{isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />} 
-				</button>
+				<div className="md:hidden flex items-center space-x-2">
+					<ThemeToggle />
+					<button onClick={() => setIsMobileMenuOpen((prev) => !prev)} 
+						className="p-2 text-foreground z-50" aria-label={isMobileMenuOpen ? "Close Menu" : "Open Menu"}
+					> 
+						{isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />} 
+					</button>
+				</div>
 
 				<div className={cn("fixed inset-0 bg-background/95 backdrop-blur-md z-40 flex flex-col items-center justify-center", 
 						"transition-all duration-300 md:hidden",

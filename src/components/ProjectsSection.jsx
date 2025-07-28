@@ -9,9 +9,19 @@ const projects = [
         image: "/projects/MovieApp.jpg",
         tags: ["React", "JavaScript", "CSS"],
         githubUrl: "https://github.com/Marouane0107/MovieApp",
+        liveUrl: "https://movie-app-lac-pi-41.vercel.app/",
     },
     {
         id: 2,
+        title: "3D Portfolio",
+        description: "A modern, interactive portfolio website built with React and Vite, featuring stunning 3D and animated UI elements powered by Framer Motion.",
+        image: "/projects/3D-Portfolio.png",
+        tags: ["React", "JavaScript", "Vite", "Framer Motion", "Tailwind CSS"],
+        githubUrl: "https://github.com/Marouane0107/3D-Portfolio",
+        liveUrl: "https://3-d-portfolio-psi-wine.vercel.app/",
+    },
+    {
+        id: 3,
         title: "IRC",
         description: "A simple IRC client built with C++, allowing users to connect to IRC servers and chat with others.",
         image: "/projects/IRC.jpg",
@@ -19,7 +29,7 @@ const projects = [
         githubUrl: "https://github.com/Marouane0107/IRC",
     },
     {
-        id: 3,
+        id: 4,
         title: "Cub3D",
         description: "Cub3D is a 3D raycasting engine that allows users to explore a 3D world from a first-person perspective.",
         image: "/projects/Cub3d.png",
@@ -27,7 +37,7 @@ const projects = [
         githubUrl: "https://github.com/Marouane0107/Cub3D",
     },
     {
-        id: 4,
+        id: 5,
         title: "ft_transcendence",
         description: "ft_transcendence is a full-stack real-time social gaming application. It features user authentication (including two-factor), friend management, and a browser-based Pong game.",
         image: "/projects/PingPong.jpg",
@@ -72,6 +82,11 @@ export const ProjectsSection = () => {
                                         <a href={project.githubUrl} target="_blank" className="text-foreground/80 hover:text-primary transition-colors duration-300">
                                             <Github size={20} />
                                         </a>
+                                        {project.liveUrl && (
+                                            <a href={project.liveUrl} target="_blank" className="text-foreground/80 hover:text-primary transition-colors duration-300">
+                                                <ExternalLink size={20} />
+                                            </a>
+                                        )}
                                     </div>
                                 </div>
                             </div>
