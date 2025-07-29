@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://aouzal.dev/sitemap.xml
+
+# Block access to admin or private areas (if any)
+Disallow: /admin/
+Disallow: /.env
+Disallow: /node_modules/
+
+# Allow crawling of CSS and JS files
+Allow: /src/
+Allow: /assets/
+Allow: *.css
+Allow: *.js
+Allow: *.jsx
