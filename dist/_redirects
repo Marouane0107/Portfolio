@@ -1,0 +1,9 @@
+# Redirect all routes to index.html for client-side routing
+/*    /index.html   200
+
+# Force HTTPS
+http://aouzal.dev/*    https://aouzal.dev/:splat    301!
+http://www.aouzal.dev/*    https://aouzal.dev/:splat    301!
+
+# Redirect www to non-www
+https://www.aouzal.dev/*    https://aouzal.dev/:splat    301!
