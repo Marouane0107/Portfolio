@@ -41,7 +41,7 @@ export const AboutSection = () => {
 							<div>
 								<div className="flex justify-between items-start mb-1">
 									<h5 className="font-semibold">Full-Stack Developer (Intern)</h5>
-									<span className="text-sm text-muted-foreground">Ending Feb 2026</span>
+									<span className="text-sm text-muted-foreground"> Sep 2025 - Feb 2026</span>
 								</div>
 								<p className="text-sm text-primary mb-1">Finance Project Development</p>
 								<ul className="text-sm text-muted-foreground space-y-1 list-disc list-inside">
