@@ -38,6 +38,14 @@ const projects = [
         tags: ["C", "Raycasting", "minilibX"],
         githubUrl: "https://github.com/Marouane0107/Cub3D",
     },
+    {
+        id: 5,
+        title: "3D Portfolio",
+        description: "A modern, interactive portfolio website built with React and Vite, featuring stunning 3D and animated UI elements powered by Framer Motion.",
+        image: "/projects/3D-Portfolio.png",
+        tags: ["React", "JavaScript", "Vite", "Framer Motion", "Tailwind CSS"],
+        githubUrl: "https://github.com/Marouane0107/3D-Portfolio",
+    },
 ];
 
 export const ProjectsSection = () => {
