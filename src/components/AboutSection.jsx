@@ -12,23 +12,48 @@ export const AboutSection = () => {
 
 				<div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 					<div className="space-y-6">
-						<h3 className="text-2xl font-semibold"> Full-Stack Developer & Software Engineering Student </h3>
-						<p className="text-muted-foreground">
-							I'm Marouane Aouzal, a software engineering student at 1337 Coding School with hands-on experience in developing robust, full-stack applications. 
-							Whether I'm building real-time multiplayer games, implementing networking protocols, or designing scalable infrastructures, I thrive on solving challenging problems through clean and maintainable code.
-						</p>
-						<p className="text-muted-foreground">
-							My technical background includes C, C++, Django, JavaScript, React, Docker, and PostgreSQL. 
-							Notable projects include a real-time Pong game using WebSockets, an IRC server with non-blocking I/O, and a multi-service Dockerized infrastructure with Nginx, MariaDB, and WordPress. 
-							I'm passionate about both front-end elegance and backend performance — always eager to learn, collaborate, and build meaningful software.
-						</p>
-
-						<div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
+					<h3 className="text-2xl font-semibold"> Chief Technology Officer & Full-Stack Architect </h3>
+					<p className="text-muted-foreground">
+						I am a Software Architect and Chief Technology Officer specializing in building high-performance, scalable digital ecosystems. Currently leading the technical vision at LinkUp Now Maroc, I oversee the full-stack development of a complex mobile service platform, focusing on secure authentication, real-time database synchronization, and seamless user experiences.
+					</p>
+					<p className="text-muted-foreground">
+						My background from 1337 Coding School has given me a deep, low-level understanding of systems (C/C++), which I now apply to modern web and mobile stacks like React Native, Node.js, and Supabase. I am a strong advocate for AI-assisted development, leveraging advanced tools to accelerate delivery cycles without compromising on code quality or security.
+					</p>
+					<p className="text-muted-foreground">
+						Whether I'm architecting a backend for a financial platform or optimizing mobile performance, my goal is to turn complex business requirements into elegant, maintainable code.
+					</p>
+					
+					<div className="bg-secondary/30 rounded-lg p-6 space-y-4">
+						<h4 className="font-semibold text-lg">Professional Experience</h4>
+						<div className="space-y-3">
+							<div>
+								<div className="flex justify-between items-start mb-1">
+									<h5 className="font-semibold">Chief Technology Officer</h5>
+									<span className="text-sm text-muted-foreground">Feb 2026 – Present</span>
+								</div>
+								<p className="text-sm text-primary mb-1">LinkUp Now Maroc</p>
+								<ul className="text-sm text-muted-foreground space-y-1 list-disc list-inside">
+									<li>Leading technical roadmap for student-focused mobile ecosystem</li>
+									<li>Managing full-stack development and security for iOS/Android and Web platforms</li>
+									<li>Architecting secure authentication with 2FA and user verification systems</li>
+								</ul>
+							</div>
+							<div>
+								<div className="flex justify-between items-start mb-1">
+									<h5 className="font-semibold">Full-Stack Developer (Intern)</h5>
+									<span className="text-sm text-muted-foreground">Ending Feb 2026</span>
+								</div>
+								<p className="text-sm text-primary mb-1">Finance Project Development</p>
+								<ul className="text-sm text-muted-foreground space-y-1 list-disc list-inside">
+									<li>Developed core architecture and backend services</li>
+									<li>Implemented secure database management with PostgreSQL</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+						<div className="flex justify-center pt-4">
 							<a href="#contact" className="cosmic-button">
 								Get in Touch
-							</a>
-							<a href="/AOUZAL_MAROUANE_CV.pdf" className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300" download>
-								Download CV
 							</a>
 						</div>
 					</div>
@@ -40,9 +65,9 @@ export const AboutSection = () => {
 									<Code className="h-6 w-6 text-primary" />
 								</div>
 								<div className="text-left">
-									<h4 className="font-semibold text-lg"> Web Devalopment</h4>
+									<h4 className="font-semibold text-lg"> Full-Stack Architecture</h4>
 									<p className="text-muted-foreground">
-										Building responsive and interactive web applications using modern frameworks.
+										Designing and implementing scalable mobile and web applications with modern frameworks and cloud infrastructure.
 									</p>
 								</div>
 							</div>
@@ -53,9 +78,9 @@ export const AboutSection = () => {
 									<User className="h-6 w-6 text-primary" />
 								</div>
 								<div className="text-left">
-									<h4 className="font-semibold text-lg"> Software Engineering </h4>
+									<h4 className="font-semibold text-lg"> Security & Authentication </h4>
 									<p className="text-muted-foreground">
-										Studying software engineering principles to design and implement efficient systems.
+										Implementing robust security systems including 2FA, user verification, and secure database management.
 									</p>
 								</div>
 							</div>
@@ -66,9 +91,9 @@ export const AboutSection = () => {
 									<Briefcase className="h-6 w-6 text-primary" />
 								</div>
 								<div className="text-left">
-									<h4 className="font-semibold text-lg"> Project Management </h4>
+									<h4 className="font-semibold text-lg"> Database & Backend Systems </h4>
 									<p className="text-muted-foreground">
-									Collaborating on full-stack software projects with version control, task planning, and deployment workflows using tools like Git, Docker, and GitHub to ensure smooth development and delivery.
+									Architecting PostgreSQL/Supabase databases with real-time synchronization and non-blocking I/O for high performance.
 									</p>
 								</div>
 							</div>

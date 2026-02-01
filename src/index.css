@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 @theme {
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --color-border: hsl(var(--border));
   --color-background: hsl(var(--background));
   --color-foreground: hsl(var(--foreground));
@@ -97,7 +98,10 @@
 
   body {
     @apply bg-background text-foreground transition-colors duration-300;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     font-feature-settings: "rlig" 1, "calt" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 }
 
@@ -129,6 +133,22 @@
 
 @utility card-hover {
   @apply transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg;
+}
+
+@utility card-hover-mobile {
+  @apply hover:scale-[1.01];
+}
+
+/* Mobile optimization - reduce animations on small screens */
+@media (max-width: 768px) {
+  .card-hover {
+    @apply card-hover-mobile;
+  }
+  
+  .animate-float,
+  .animate-pulse-subtle {
+    animation: none !important;
+  }
 }
 
 @utility gradient-border {

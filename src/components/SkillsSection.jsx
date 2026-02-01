@@ -3,36 +3,39 @@ import { cn } from "@/lib/utils";
 
 
 const skills = [
-	// Programming Languages
-	{ name: 'C', level: '95', category: 'Programming Languages' },
-	{ name: 'C++', level: '90', category: 'Programming Languages' },
-	{ name: 'Python', level: '80', category: 'Programming Languages' },
+	// Languages
+	{ name: 'C', category: 'Languages' },
+	{ name: 'C++', category: 'Languages' },
+	{ name: 'Python', category: 'Languages' },
+	{ name: 'TypeScript', category: 'Languages' },
+	{ name: 'JavaScript', category: 'Languages' },
 
-	// Frontend Skills
-	{ name: 'HTML/CSS', level: '80', category: 'Frontend' },
-	{ name: 'JavaScript', level: '75', category: 'Frontend' },
-	{ name: 'React', level: '80', category: 'Frontend' },
-	{ name: 'Tailwind CSS', level: '60', category: 'Frontend' },
+	// Frameworks & Libraries
+	{ name: 'React', category: 'Frameworks' },
+	{ name: 'React Native', category: 'Frameworks' },
+	{ name: 'Django', category: 'Frameworks' },
+	{ name: 'Node.js', category: 'Frameworks'},
+	{ name: 'Tailwind CSS', category: 'Frameworks' },
 
-	// Backend Skills
-	{ name: 'Django', level: '85', category: 'Backend' },
-	{ name: 'Node.js', level: '70', category: 'Backend'},
-	{ name: 'PostgreSQL', level: '80', category: 'Backend' },
-	{ name: 'MariaDB', level: '70', category: 'Backend'},
+	// Infrastructure & Database
+	{ name: 'Docker', category: 'Infrastructure' },
+	{ name: 'Supabase', category: 'Infrastructure' },
+	{ name: 'PostgreSQL', category: 'Infrastructure' },
+	{ name: 'Linux', category: 'Infrastructure' },
 
-	// Tools
-	{ name: 'Git/Github', level: '90', category: 'Tools' },
-	{ name: 'Docker', level: '80', category: 'Tools' },
-	{ name: 'Linux', level: '90', category: 'Tools' },
-	{ name: 'Bash', level: '85', category: 'Tools' },
-	{ name: 'VS Code', level: '95', category: 'Tools' },
+	// AI & Development Tools
+	{ name: 'AI-Assisted Development', category: 'Tools' },
+	{ name: 'Cursor AI', category: 'Tools' },
+	{ name: 'GitHub Copilot', category: 'Tools' },
+	{ name: 'Git/GitHub', category: 'Tools' },
+	{ name: 'VS Code', category: 'Tools' },
 ]
 
 const categorys = [
 	"all",
-	"Programming Languages",
-	"Frontend",
-	"Backend",
+	"Languages",
+	"Frameworks",
+	"Infrastructure",
 	"Tools"
 ];
 
@@ -63,20 +66,12 @@ export const SkillsSection = () => {
 					))}
 				</div>
 
-				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+				<div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
 					{filteredSkills.map((skill, key) => (
-						<div key={key} className="bg-card rounded-lg shadow-xs p-6 card-hover">
-							<div className="text-left mb-4">
-								<h3 className="text-lg font-semibold">{skill.name}</h3>
-							</div>
-							<div className="w-full bg-secondary/50 rounded-full h-2.5 dark:bg-gray-700 overflow-hidden">
-									<div
-										className="bg-primary h-2.5 rounded-full origin-left animate-[grow_1.5s_ease-in-out]"
-										style={{ width: `${skill.level}%` }}
-									/>
-							</div>
-							<div className="text-right mt-1">
-								<span className="text-sm text-muted-foreground">{skill.level}%</span>
+						<div key={key} className="bg-card rounded-lg shadow-xs p-4 card-hover text-center hover:scale-105 transition-transform duration-300">
+							<div className="flex flex-col items-center justify-center h-full">
+								<h3 className="text-base font-semibold text-foreground">{skill.name}</h3>
+								<span className="text-xs text-muted-foreground mt-1">{skill.category}</span>
 							</div>
 						</div>
 					))}

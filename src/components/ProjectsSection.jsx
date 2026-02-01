@@ -4,45 +4,39 @@ import { ArrowRight, ExternalLink, Github } from "lucide-react";
 const projects = [
     {
         id: 1,
-        title: "Movie App",
-        description: "A movie app built that allows users to search for movies, view details, and manage their favorite movies.",
-        image: "/projects/MovieApp.jpg",
-        tags: ["React", "JavaScript", "CSS"],
-        githubUrl: "https://github.com/Marouane0107/MovieApp",
-        liveUrl: "https://movie-app-lac-pi-41.vercel.app/",
+        title: "LinkUp - Student Services Super App",
+        description: "CTO & Lead Architect — Architected a secure, scalable platform for ride-sharing and tutoring, managing user authentication, real-time database synchronization, and multi-service infrastructure for iOS, Android, and Web.",
+        image: "/projects/linkUp-background.png",
+        tags: ["TypeScript", "React Native", "Next.js", "Supabase", "PostgreSQL", "Node.js"],
+        githubUrl: "https://github.com/Marouane0107/LinkUp",
+        liveUrl: "https://www.linkupnow.ma/",
+        role: "CTO & Lead Architect",
+        featured: true,
     },
     {
         id: 2,
-        title: "3D Portfolio",
-        description: "A modern, interactive portfolio website built with React and Vite, featuring stunning 3D and animated UI elements powered by Framer Motion.",
-        image: "/projects/3D-Portfolio.png",
-        tags: ["React", "JavaScript", "Vite", "Framer Motion", "Tailwind CSS"],
-        githubUrl: "https://github.com/Marouane0107/3D-Portfolio",
-        liveUrl: "https://3-d-portfolio-psi-wine.vercel.app/",
+        title: "ft_transcendence",
+        description: "Full-stack real-time social gaming application with 2FA authentication, friend management, and WebSocket-powered multiplayer Pong. Showcases security, real-time communication, and database management.",
+        image: "/projects/PingPong.jpg",
+        tags: ["Django", "Python", "JavaScript", "PostgreSQL", "Docker", "WebSockets", "2FA"],
+        githubUrl: "https://github.com/Marouane0107/ft_transcendence",
+        featured: true,
     },
     {
         id: 3,
-        title: "IRC",
-        description: "A simple IRC client built with C++, allowing users to connect to IRC servers and chat with others.",
+        title: "IRC Server",
+        description: "High-performance IRC server built with C++ featuring non-blocking I/O, socket programming, and multi-client management with authentication and channel operations.",
         image: "/projects/IRC.jpg",
-        tags: ["C++", "Socket Programming", "Multithreading"],
+        tags: ["C++", "Socket Programming", "Non-blocking I/O"],
         githubUrl: "https://github.com/Marouane0107/IRC",
     },
     {
         id: 4,
         title: "Cub3D",
-        description: "Cub3D is a 3D raycasting engine that allows users to explore a 3D world from a first-person perspective.",
+        description: "3D raycasting engine with first-person perspective exploration, demonstrating graphics programming and algorithm optimization.",
         image: "/projects/Cub3d.png",
         tags: ["C", "Raycasting", "minilibX"],
         githubUrl: "https://github.com/Marouane0107/Cub3D",
-    },
-    {
-        id: 5,
-        title: "ft_transcendence",
-        description: "ft_transcendence is a full-stack real-time social gaming application. It features user authentication (including two-factor), friend management, and a browser-based Pong game.",
-        image: "/projects/PingPong.jpg",
-        tags: ["Django", "Python", "JavaScript", "PostgreSQL", "Docker", "HTML", "CSS", "WebSockets"],
-        githubUrl: "https://github.com/Marouane0107/ft_transcendence",
     },
 ];
 
@@ -56,11 +50,69 @@ export const ProjectsSection = () => {
                 </h2>
 
                 <p className="text-muted-foreground mb-12 max-w-2xl mx-auto text-center">
-                    Here are some of the projects I've worked on that showcase my skills and interests.
+                    Production systems and architectures demonstrating enterprise-grade development.
                 </p>
 
+                {/* Featured Project - LinkUp */}
+                <div className="mb-12 bg-gradient-to-br from-card/80 to-card border border-primary/20 rounded-xl overflow-hidden shadow-xl">
+                    <div className="grid md:grid-cols-2 gap-0">
+                        <div className="relative h-64 md:h-auto">
+                            <img src="/projects/linkUp-background.png" alt="LinkUp Platform" className="w-full h-full object-cover" />
+                            <div className="absolute top-4 left-4 bg-primary/90 text-primary-foreground px-3 py-1 rounded-full text-xs font-semibold">
+                                FEATURED PROJECT
+                            </div>
+                        </div>
+                        <div className="p-8 flex flex-col justify-center">
+                            <h3 className="text-2xl md:text-3xl font-bold mb-2">LinkUp - Student Services Super App</h3>
+                            <p className="text-primary font-semibold mb-4">CTO & Lead Architect</p>
+                            <p className="text-muted-foreground mb-6">
+                                Architecting a secure, scalable student ecosystem featuring real-time ride-sharing, academic tutoring, and an interactive community feed, integrated with a cross-platform real-time messaging system.
+                            </p>
+                            
+                            <div className="mb-6">
+                                <h4 className="text-sm font-semibold mb-3 uppercase tracking-wide">System Architecture</h4>
+                                <div className="space-y-2 text-sm">
+                                    <div className="flex items-start gap-2">
+                                        <span className="text-primary mt-0.5">▸</span>
+                                        <span><strong>Frontend:</strong> React Native (iOS/Android) + Next.js (Web)</span>
+                                    </div>
+                                    <div className="flex items-start gap-2">
+                                        <span className="text-primary mt-0.5">▸</span>
+                                        <span><strong>Backend:</strong> Node.js + Supabase (PostgreSQL)</span>
+                                    </div>
+                                    <div className="flex items-start gap-2">
+                                        <span className="text-primary mt-0.5">▸</span>
+                                        <span><strong>Security:</strong> 2FA, JWT tokens, Row-level security</span>
+                                    </div>
+                                    <div className="flex items-start gap-2">
+                                        <span className="text-primary mt-0.5">▸</span>
+                                        <span><strong>Infrastructure:</strong> Real-time subscriptions, Cloud functions</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div className="flex flex-wrap gap-2 mb-6">
+                                {["TypeScript", "React Native", "Next.js", "Supabase", "PostgreSQL", "Node.js"].map((tag, idx) => (
+                                    <span key={idx} className="text-xs font-medium bg-primary/10 text-primary border border-primary/20 px-3 py-1 rounded-full">
+                                        {tag}
+                                    </span>
+                                ))}
+                            </div>
+                            
+                            <div className="flex gap-3">
+                                <a href="https://www.linkupnow.ma/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-2.5 rounded-lg font-semibold hover:opacity-90 transition-opacity">
+                                    <ExternalLink size={18} />
+                                    View Live Site
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Other Projects Grid */}
+                <h3 className="text-xl font-semibold mb-6">Other Projects</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {projects.map((project, key) => (
+                    {projects.filter(p => p.id !== 1).map((project, key) => (
                         <div key={key} className="group bg-card rounded-lg shadow-xs overflow-hidden card-hover, ">
                             <div className="h-48 overflow-hidden">
                                 <img src={project.image} alt={project.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />

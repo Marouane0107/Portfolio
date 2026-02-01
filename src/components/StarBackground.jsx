@@ -21,7 +21,10 @@ export const StarBackground = () => {
 	}, []);
 
 	const createStar = () => {
-		const numberOfStars = Math.floor(window.innerWidth * window.innerHeight / 10000);
+		// Reduce stars on mobile for better performance
+		const isMobile = window.innerWidth < 768;
+		const divisor = isMobile ? 20000 : 10000;
+		const numberOfStars = Math.floor(window.innerWidth * window.innerHeight / divisor);
 		const newStars = [];
 
 		for (let i = 0; i < numberOfStars; i++) {
@@ -39,7 +42,9 @@ export const StarBackground = () => {
 	};
 
 	const creatMeteors = () => {
-		const numberOfMeteors = 5;
+		// Disable meteors on mobile for performance
+		const isMobile = window.innerWidth < 768;
+		const numberOfMeteors = isMobile ? 0 : 5;
 		const newMeteors = [];
 
 		for (let i = 0; i < numberOfMeteors; i++) {

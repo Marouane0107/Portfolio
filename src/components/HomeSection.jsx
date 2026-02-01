@@ -12,8 +12,8 @@ export const HomeSection = () => {
 						<span className="text-gradient ml-2 opacity-0 animate-fade-in-delay-2"> Aouzal</span>
 					</h1>
 					<p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">
-						I'm a software engineering student at 1337 Coding School, passionate about building seamless user experiences and scalable backend systems. 
-						From real-time games to network infrastructure, I love turning complex problems into clean, efficient code across the full stack.
+						Chief Technology Officer & Full-Stack Architect, Leading technical vision and building secure, scalable platforms. 
+						From architecting real-time systems to managing production infrastructure, I transform complex challenges into robust, efficient solutions.
 					</p> 
 					<div className="pt-4 opacity-0 animate-fade-in-delay-4">
 						<a href="#projects" className="cosmic-button">
