@@ -7,7 +7,7 @@ const projects = [
         title: "LinkUp - Student Services Super App",
         description: "CTO & Lead Architect — Architected a secure, scalable platform for ride-sharing and tutoring, managing user authentication, real-time database synchronization, and multi-service infrastructure for iOS, Android, and Web.",
         image: "/projects/linkUp-background.png",
-        tags: ["TypeScript", "React Native", "Next.js", "Supabase", "PostgreSQL", "Node.js"],
+        tags: ["TypeScript", "React Native", "Expo", "Next.js", "Supabase", "PostgreSQL", "Node.js"],
         githubUrl: "https://github.com/Marouane0107/LinkUp",
         liveUrl: "https://www.linkupnow.ma/",
         role: "CTO & Lead Architect",
@@ -65,24 +65,25 @@ export const ProjectsSection = () => {
                 <div className="mb-12 bg-gradient-to-br from-card/80 to-card border border-primary/20 rounded-xl overflow-hidden shadow-xl">
                     <div className="grid md:grid-cols-2 gap-0">
                         <div className="relative h-64 md:h-auto">
-                            <img src="/projects/linkUp-background.png" alt="LinkUp Platform" className="w-full h-full object-cover" />
+                            <img src="/projects/linkUp-background.png" alt="LinkUp campus community: ride-sharing, tutoring, and student deals" className="absolute inset-0 w-full h-full object-fill" />
                             <div className="absolute top-4 left-4 bg-primary/90 text-primary-foreground px-3 py-1 rounded-full text-xs font-semibold">
                                 FEATURED PROJECT
                             </div>
                         </div>
                         <div className="p-8 flex flex-col justify-center">
                             <h3 className="text-2xl md:text-3xl font-bold mb-2">LinkUp - Student Services Super App</h3>
-                            <p className="text-primary font-semibold mb-4">CTO & Lead Architect</p>
+                            <p className="text-primary font-semibold mb-4">CTO & Lead Mobile Architect</p>
                             <p className="text-muted-foreground mb-6">
                                 Architecting a secure, scalable student ecosystem featuring real-time ride-sharing, academic tutoring, and an interactive community feed, integrated with a cross-platform real-time messaging system.
                             </p>
+                            <p className="text-primary text-sm font-semibold mb-6">Available on Google Play and the Apple App Store.</p>
                             
                             <div className="mb-6">
                                 <h4 className="text-sm font-semibold mb-3 uppercase tracking-wide">System Architecture</h4>
                                 <div className="space-y-2 text-sm">
                                     <div className="flex items-start gap-2">
                                         <span className="text-primary mt-0.5">▸</span>
-                                        <span><strong>Frontend:</strong> React Native (iOS/Android) + Next.js (Web)</span>
+                                        <span><strong>Frontend:</strong> React Native + Expo (iOS/Android) + Next.js (Web)</span>
                                     </div>
                                     <div className="flex items-start gap-2">
                                         <span className="text-primary mt-0.5">▸</span>
@@ -100,7 +101,7 @@ export const ProjectsSection = () => {
                             </div>
                             
                             <div className="flex flex-wrap gap-2 mb-6">
-                                {["TypeScript", "React Native", "Next.js", "Supabase", "PostgreSQL", "Node.js"].map((tag, idx) => (
+                                {projects[0].tags.map((tag, idx) => (
                                     <span key={idx} className="text-xs font-medium bg-primary/10 text-primary border border-primary/20 px-3 py-1 rounded-full">
                                         {tag}
                                     </span>

@@ -1,4 +1,4 @@
-import { act, useState } from "react";
+import { useState } from "react";
 import { cn } from "@/lib/utils";
 
 
@@ -13,6 +13,7 @@ const skills = [
 	// Frameworks & Libraries
 	{ name: 'React', category: 'Frameworks' },
 	{ name: 'React Native', category: 'Frameworks' },
+	{ name: 'Expo', category: 'Frameworks' },
 	{ name: 'Django', category: 'Frameworks' },
 	{ name: 'Node.js', category: 'Frameworks'},
 	{ name: 'Tailwind CSS', category: 'Frameworks' },
@@ -47,7 +48,7 @@ export const SkillsSection = () => {
 
 	return (
 		<section id="skills" className="py-24 relotave bg-secondary/30">
-			<div className="cotainer mx-auto max-w-5xl">
+			<div className="container mx-auto max-w-5xl">
 				<h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
 					My <span className="text-primary"> Skills</span>
 				</h2>
@@ -56,6 +57,7 @@ export const SkillsSection = () => {
 					{categorys.map((category, key) => (
 						<button
 							key={key}
+							aria-pressed={activeCategory === category}
 							onClick={() => setActiveCategory(category)}
 							className={cn("px-5 py-2 rounded-full transition-colors duration-300 capitalize ",
 							activeCategory === category ? "bg-primary text-primary-foreground" : "bg-secondary/70 text-foreground hover:bg-seconfary"

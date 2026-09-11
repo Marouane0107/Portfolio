@@ -1,31 +1,31 @@
-import { ArrowDown } from "lucide-react";
+import { ArrowDown, Mail, Terminal, Workflow, Zap } from "lucide-react";
+import { createElement } from "react";
 
+const highlights = [
+	{ icon: Terminal, label: "Foundation", title: "1337 Coding School", detail: "Rigorous 42 Network C/C++ Discipline" },
+	{ icon: Workflow, label: "Expertise", title: "Low-Level to Full-Stack", detail: "Memory Safety to Modern Cloud Stacks" },
+	{ icon: Zap, label: "Throughput", title: "Real-Time Systems", detail: "Non-blocking Sockets & Real-Time Sync" },
+];
 
-export const HomeSection = () => {
-
-	return( <section id="home" className="relative min-h-screen flex flex-col items-center justify-center px-4">
-			<div className="container max-w-4xl mx-auto text-center z-10">
-				<div className="space-y-6">
-					<h1 className="text-4xl md:text-6xl font-bold tracking-tight">
-						<span className="opacity-0 animate-fade-in"> Hi, I'm</span>
-						<span className="text-primary opacity-0 animate-fade-in-delay-1"> Marouane</span>
-						<span className="text-gradient ml-2 opacity-0 animate-fade-in-delay-2"> Aouzal</span>
-					</h1>
-					<p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">
-						Chief Technology Officer & Full-Stack Architect, Leading technical vision and building secure, scalable platforms. 
-						From architecting real-time systems to managing production infrastructure, I transform complex challenges into robust, efficient solutions.
-					</p> 
-					<div className="pt-4 opacity-0 animate-fade-in-delay-4">
-						<a href="#projects" className="cosmic-button">
-							View My Projects
-						</a>
+export const HomeSection = () => (
+	<section id="home" className="celestial-hero relative px-4">
+		<div className="container relative z-10 mx-auto text-center">
+			<div className="hero-status"><span />Available for Strategic & Architectural Advisory</div>
+			<h1>Hi, I'm <span>Marouane</span> Aouzal</h1>
+			<p className="hero-description">Chief Technology Officer, Full-Stack & Mobile Architect. Building secure, scalable web and mobile platforms with React Native and Expo. From architecting real-time systems to shipping apps on Google Play and the Apple App Store, I transform complex challenges into robust, efficient solutions.</p>
+			<div className="hero-actions">
+				<a href="#projects" className="cosmic-button">View My Projects <ArrowDown size={18} /></a>
+				<a href="#contact" className="secondary-button">Get In Touch <Mail size={18} /></a>
+			</div>
+			<div className="hero-highlights">
+				{highlights.map(({ icon: Icon, label, title, detail }) => (
+					<div className="hero-highlight" key={label}>
+						<div>{createElement(Icon, { size: 20 })}<span>{label}</span></div>
+						<h2>{title}</h2>
+						<p>{detail}</p>
 					</div>
-				</div>
+				))}
 			</div>
-			<div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
-				<span className="text-sm text-muted-foreground mb-2"> Scroll </span>
-				<ArrowDown className="h-5 w-5 text-primary"></ArrowDown>
-			</div>
-		</section>
-	);
-};
+		</div>
+	</section>
+);

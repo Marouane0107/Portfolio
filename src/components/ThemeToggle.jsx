@@ -16,6 +16,11 @@ export const ThemeToggle = ({ className = "" }) => {
             setIsDarkMode(true);
             document.documentElement.classList.add('dark');
         }
+        const observer = new MutationObserver(() => {
+            setIsDarkMode(document.documentElement.classList.contains('dark'));
+        });
+        observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+        return () => observer.disconnect();
     }, []);
 
     const toggleTheme = () => {

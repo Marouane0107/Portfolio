@@ -12,12 +12,12 @@ export const AboutSection = () => {
 
 				<div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 					<div className="space-y-6">
-					<h3 className="text-2xl font-semibold"> Chief Technology Officer & Full-Stack Architect </h3>
+					<h3 className="text-2xl font-semibold"> Chief Technology Officer, Full-Stack & Mobile Architect </h3>
 					<p className="text-muted-foreground">
-						I am a Software Architect and Chief Technology Officer specializing in building high-performance, scalable digital ecosystems. Currently leading the technical vision at LinkUp Now Maroc, I oversee the full-stack development of a complex mobile service platform, focusing on secure authentication, real-time database synchronization, and seamless user experiences.
+						I am a Software Architect and Chief Technology Officer specializing in building high-performance, scalable digital ecosystems. Currently leading the technical vision at LinkUp Now Maroc, I oversee the full-stack development of a cross-platform service ecosystem spanning iOS and Android apps and a website, focusing on secure authentication, real-time database synchronization, and seamless user experiences.
 					</p>
 					<p className="text-muted-foreground">
-						My background from 1337 Coding School has given me a deep, low-level understanding of systems (C/C++), which I now apply to modern web and mobile stacks like React Native, Node.js, and Supabase. I am a strong advocate for AI-assisted development, leveraging advanced tools to accelerate delivery cycles without compromising on code quality or security.
+						My background from 1337 Coding School has given me a deep, low-level understanding of systems (C/C++), which I now apply to modern web and mobile stacks like React Native, Expo, Node.js, and Supabase. As a Mobile Architect, I build cross-platform experiences for iOS and Android, including LinkUp, now available on Google Play and the Apple App Store. I am a strong advocate for AI-assisted development, leveraging advanced tools to accelerate delivery cycles without compromising on code quality or security.
 					</p>
 					<p className="text-muted-foreground">
 						Whether I'm architecting a backend for a financial platform or optimizing mobile performance, my goal is to turn complex business requirements into elegant, maintainable code.
@@ -65,9 +65,9 @@ export const AboutSection = () => {
 									<Code className="h-6 w-6 text-primary" />
 								</div>
 								<div className="text-left">
-									<h4 className="font-semibold text-lg"> Full-Stack Architecture</h4>
+									<h4 className="font-semibold text-lg"> Full-Stack & Mobile Architecture</h4>
 									<p className="text-muted-foreground">
-										Designing and implementing scalable mobile and web applications with modern frameworks and cloud infrastructure.
+									Designing scalable web applications and cross-platform iOS and Android apps with React Native, Expo, and modern cloud infrastructure.
 									</p>
 								</div>
 							</div>

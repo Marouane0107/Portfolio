@@ -21,7 +21,7 @@ export const Navbar = () => {
 
 	useEffect(() => {
 		const handleScroll = () => {
-			setIsScrolled(window.screenY > 10);
+			setIsScrolled(window.scrollY > 10);
 		};
 
 		window.addEventListener('scroll', handleScroll);
@@ -36,7 +36,7 @@ export const Navbar = () => {
 			<div className="container flex items-center justify-between">
 				<a className="text-xl font-bold text-primary flex items-center" href="#home" >
 					<span className="relative z-20">
-						<span className="text-glow text-foreground"> Mar_1 </span> Portfolio
+						<span className="text-foreground"> Marouane </span> Aouzal<span className="text-primary">.</span>
 					</span>
 				</a>
 				{/* desktop nav */}
@@ -52,13 +52,13 @@ export const Navbar = () => {
 				<div className="md:hidden flex items-center space-x-2">
 					<ThemeToggle />
 					<button onClick={() => setIsMobileMenuOpen((prev) => !prev)} 
-						className="p-2 text-foreground z-50" aria-label={isMobileMenuOpen ? "Close Menu" : "Open Menu"}
+						className="p-2 text-foreground z-50" aria-expanded={isMobileMenuOpen} aria-label={isMobileMenuOpen ? "Close Menu" : "Open Menu"}
 					> 
 						{isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />} 
 					</button>
 				</div>
 
-				<div className={cn("fixed inset-0 bg-background/95 backdrop-blur-md z-40 flex flex-col items-center justify-center", 
+				<div inert={!isMobileMenuOpen} className={cn("fixed inset-0 h-dvh bg-background/95 backdrop-blur-md z-40 flex flex-col items-center justify-center", 
 						"transition-all duration-300 md:hidden",
 						isMobileMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none")}
 				>
